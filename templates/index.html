@@ -3,16 +3,25 @@
 {% block title %}Placement Preparation &amp; Tracking System{% endblock %}
 
 {% block content %}
-<div class="px-3 py-5 text-center">
-  <h1 class="display-5 fw-bold mb-4">Placement Preparation &amp; Tracking System</h1>
-  <div class="d-flex justify-content-center gap-3 flex-wrap">
+<section class="hero">
+  <span class="eyebrow">Placement Cell</span>
+  <h1>Prepare. Apply. Get placed.</h1>
+  <p class="lead">One calm place to track drives, applications and practice tests, built for students and the placement office.</p>
+  <div class="d-flex justify-content-center gap-2 flex-wrap">
     {% if current_user.is_authenticated and current_user.role == 'student' %}
       <a class="btn btn-primary btn-lg" href="{{ url_for('student.dashboard') }}">Student dashboard</a>
     {% elif current_user.is_authenticated and current_user.role == 'admin' %}
       <a class="btn btn-primary btn-lg" href="{{ url_for('admin.dashboard') }}">TPO dashboard</a>
     {% else %}
-      <a class="btn btn-primary btn-lg" href="{{ url_for('auth.login') }}">Login as Student or Admin</a>
+      <a class="btn btn-primary btn-lg" href="{{ url_for('auth.login') }}">Login</a>
+      <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('auth.register') }}">Create account</a>
     {% endif %}
   </div>
-</div>
+</section>
+<section class="features">
+  <div class="feature"><div class="dot">●</div><h3>Placement drives</h3><p>See eligible companies and apply in a click.</p></div>
+  <div class="feature"><div class="dot">●</div><h3>Practice tests</h3><p>MCQ tests with scores and attempt history.</p></div>
+  <div class="feature"><div class="dot">●</div><h3>Live tracking</h3><p>Follow every application through its stages.</p></div>
+  <div class="feature"><div class="dot">●</div><h3>Reports</h3><p>Analytics and NAAC/NBA exports for the TPO.</p></div>
+</section>
 {% endblock %}
