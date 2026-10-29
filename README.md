@@ -10,7 +10,7 @@ A Flask web application for a college placement cell to manage placement drives,
 - Eligibility checking and student applications with status pipelines
 - Preparation resources, MCQ tests, scoring, and attempt history
 - Live admin dashboard, reports, placement analytics, and NAAC/NBA CSV exports
-- Admin student management, application workflow, preparation CRUD, and bulk question import
+- Admin student management, application workflow, preparation CRUD, and bulk question importing
 - Admin profile/password updates, administrator management, and a latest-50 audit trail
 - Responsive Bootstrap admin shell with mobile sidebar navigation and confirmation dialogs
 
